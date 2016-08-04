@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的订单</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="public/css/sm.css">
+    <link rel="stylesheet" href="public/css/layout.css">
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463132792_2761781.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current" id="myOrdersPage">
+            <header class="bar bar-nav">
+                <a  class="button button-link pull-left" onclick="rot.back()">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">我的订单</h1>
+            </header>
+            <div style="position:absolute;left:0;right:0;top:3.2rem;">
+                <div class="buttons-tab">
+                    <a href="#allOrders" class="tab-link active button" id="allTabLink">全部</a>
+                    <a href="#tobesendedOrders" class="tab-link button" id="tobesendedTabLink">待发货</a>
+                    <a href="#sendedOrders" class="tab-link button" id="sendedTabLink">已发货</a>
+                </div>
+            </div>
+            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="75" style="top:5.2rem;">
+                <!-- 
+                <div class="buttons-tab fixed-tab" data-offset="64">
+                    <a href="#allOrders" class="tab-link active button" id="allTabLink">全部</a>
+                    <a href="#tobesendedOrders" class="tab-link button" id="tobesendedTabLink">待发货</a>
+                    <a href="#sendedOrders" class="tab-link button" id="sendedTabLink">已发货</a>
+                </div>
+                 -->
+                <div class="content-block">
+                    <div class="tabs">
+                        <div class="tab active" id="allOrders">
+                            <!-- <div class="order-item">
+                                <div class="order-header">
+                                    <span class="order-number">订单编号：333333</span>
+                                    <span class="order-status status-tobesended">待发货</span>
+                                </div>
+                                <div class="order-content" onclick="rot.order_details()">
+                                    <div class="order-media">
+                                        <img src="./public/img/avatar.GIF">
+                                    </div>
+                                    <div class="order-info">
+                                        <p class="info-title">飞利浦xxx车载xxxxx</p>
+                                        <p class="info-options">蓝色 5寸</p>
+                                        <p class="info-amount">
+                                            <span class="per-price">¥50.00</span>
+                                            <span class="amount-num">x50</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    合计：
+                                    <span class="total-price">
+                                        ¥1000.00
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="order-item more-items">
+                                <div class="order-header">
+                                    <span class="order-number">订单编号：333333</span>
+                                    <span class="order-status status-sended">已发货</span>
+                                </div>
+                                <div class="order-content" onclick="rot.order_details()">
+                                    <div class="order-media">
+                                        <img src="./public/img/avatar.GIF">
+                                    </div>
+                                    <div class="order-media more-media">
+                                        <img src="./public/img/avatar.GIF">
+                                    </div>
+                                    <div class="order-info">
+                                        共<span class="item-count">3</span>件
+                                        <i class="icon icon-right"></i>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="total-price">
+                                        合计：¥1000.00
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="tab" id="tobesendedOrders">
+                        </div>
+                        <div class="tab" id="sendedOrders">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page" id="orderDetails">
+            <header class="bar bar-nav">
+                <a  class="button button-link pull-left" onclick="rot.back();">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">订单详情</h1>
+            </header>
+            <nav class="bar bar-tab" id="sendBtnContainer">
+                <button class="button pull-right" id="sendBtn">确认发货</button>
+            </nav>
+            <div class="content">
+                <div class="order-item">
+                    <!-- 
+                    <div class="order-header">
+                        <span class="order-number">订单编号：<span id="orderNumber"></span></span>
+                        <span class="order-status" id="orderStatus"></span> 
+                    </div> -->
+                    <!-- 
+                    <div class="order-content">
+                        <div class="receive-info">
+                            <p>
+                                收货商户：<span class="receive-shop" id="receiveShop"></span>
+                            </p>
+                            <p>
+                                收货人：<span class="receive-person" id="receiveLinkMan"></span>&nbsp;&nbsp;
+                                <span class="receive-tel" id="receiveLinkTel"></span>
+                            </p>
+                            <p>
+                                <i class="fa fa-map-marker"></i>送货地址：
+                                <span class="receive-address" id="receiveAddress"></span>
+                            </p>
+                        </div>
+                        <div class="products-list">
+                            <div class="product-item">
+                                <div class="product-header">
+                                    <span class="product-name">商品2</span>
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-media">
+                                        <img src="./public/img/avatar.GIF">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="info-title">飞利浦xxx车载xxxxx</p>
+                                        <p class="info-options">蓝色 5寸</p>
+                                        <p class="info-amount">
+                                            <span class="per-price">¥50.00</span>
+                                            <span class="amount-num">x50</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="product-footer">
+                                    小计：
+                                    <span class="sum-price">¥2500.00</span>
+                                </div>
+                            </div>
+
+                            <div class="total-price-container">
+                                合计：
+                                <span class="total-price">¥5000.00</span>
+                            </div>
+                        </div>
+
+                        待发货
+                        <div class="express-info">
+                            <div class="content-block-title">选择配送方式</div>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="./public/img/icon_deliver.png">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title">送货</div>
+                                            <label>
+                                                <div class="item-after">
+                                                    <div class="circle-check-container">
+                                                        <input type="checkbox" name="">
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <img src="./public/img/icon_express.png">
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title">快递</div>
+                                            <label>
+                                                <div class="item-after">
+                                                    <div class="circle-check-container">
+                                                        <input type="checkbox" name="">
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="item-content item-link">
+                                        <div class="item-inner">
+                                            <div class="item-title">选择快递公司</div>
+                                            <div class="item-after">
+                                                <input type="text" id="expressPicker" value="顺丰速运">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">输入快递单号</div>
+                                            <div class="item-after">
+                                                <input type="text" id="expressNo" value="1231231231">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+
+                        待收货
+                        <div class="express-info">
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">配送方式</div>
+                                            <div class="item-after">快递</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">快递公司</div>
+                                            <div class="item-after">顺丰速运</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">快递单号</div>
+                                            <div class="item-after">12345245355258</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        已收货
+                        <div class="express-info">
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">配送方式</div>
+                                            <div class="item-after">快递</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">快递公司</div>
+                                            <div class="item-after">顺丰速运</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">快递单号</div>
+                                            <div class="item-after">12345245355258</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="feedback-info">
+                            <div class="content-block-title">评价详情</div>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">商品满意度</div>
+                                            <div class="item-after" id="productEvaluate"></div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">配送速度满意度</div>
+                                            <div class="item-after" id="expressEvaluate"></div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">配送人员服务满意度</div>
+                                            <div class="item-after" id="expresserEvaluate"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='./lib/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='./lib/touch.js' charset='utf-8'></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+    <!-- 业务js -->
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/setPage.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

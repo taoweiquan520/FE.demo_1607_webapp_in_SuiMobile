@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>清算申请</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="public/css/sm.css">
+    <link rel="stylesheet" href="public/css/layout.css">
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1463132792_2761781.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+    <div class="page-group">
+        <div class="page page-current index" id="myClearance">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left" onclick="rot.back()">
+                    <span class="icon icon-left"></span>
+                </a>
+                <h1 class="title">清算申请</h1>
+            </header>
+            <div id="quickLinksContainer" style="position:absolute;left:0;right:0;top:3.2rem;">
+                <div class="row no-gutter" id="quickLinks">
+                    <div class="row-100" id="searchContainer">
+                        <div class="bar-header-secondary">
+                            <div class="searchbar">
+                                <a class="searchbar-cancel" onclick="pageEffects.searchbar_hide()" href="">取消</a>
+                                <div class="search-input">
+                                    <label class="icon icon-search" for="search"></label>
+                                    <input type="search" id="search" placeholder="输入关键字..." onkeypress="if(event.keyCode==13){rot.my_clearance_search()}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50 text-center vertical-division" id="searchLink" onclick="pageEffects.searchbar_show()">
+                        <a href=""> 
+                            <i class="fa fa-search"></i>
+                            搜索
+                        </a>
+                    </div>
+                    <div class="col-50 text-center" id="applyLink" onclick="rot.applying_clearance()">
+                        <a href="">
+                            <i class="fa fa-plus color-danger"></i>
+                            添加申请
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="75" style="top:5.2rem;">
+                <div id="clearanceContainer" class="active" style="margin-top:0;">
+                    <!-- 
+                    <div id="quickLinksContainer">
+                        <div class="row no-gutter" id="quickLinks">
+                            <div class="row-100" id="searchContainer">
+                                <div class="bar-header-secondary">
+                                    <div class="searchbar">
+                                        <a class="searchbar-cancel" onclick="pageEffects.searchbar_hide()" href="">取消</a>
+                                        <div class="search-input">
+                                            <label class="icon icon-search" for="search"></label>
+                                            <input type="search" id="search" placeholder="输入关键字..." onkeypress="if(event.keyCode==13){rot.my_clearance_search()}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-50 text-center vertical-division" id="searchLink" onclick="pageEffects.searchbar_show()">
+                                <a href=""> 
+                                    <i class="fa fa-search"></i>
+                                    搜索
+                                </a>
+                            </div>
+                            <div class="col-50 text-center" id="applyLink" onclick="rot.applying_clearance()">
+                                <a href="">
+                                    <i class="fa fa-plus color-danger"></i>
+                                    添加申请
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                     -->
+                    <div id="clearanceTitle">清算列表</div>
+                    <div id="clearanceList">
+                        <!-- 
+                        <div class="clearance-item horizontal-division" onclick="rot.clearance_details()">
+                            <p class="clearance-no">
+                                申请编号：
+                                <span class="no-val">20160404103500</span>
+                            </p>
+                            <p class="clearance-date">
+                                申请时间：
+                                <span class="date-val">2016-04-04 10:35</span>
+                            </p>
+                            <p class="clearance-remark">
+                                备&nbsp;&nbsp;&nbsp;&nbsp;注：
+                                <span class="remark-val">5个订单，共1400元</span>
+                            </p>
+                            <p class="clearance-status">
+                                状&nbsp;&nbsp;&nbsp;&nbsp;态：
+                                <span class="status-val status-tobechecked">待审核</span>
+                            </p>
+                        </div>
+                         -->
+                    </div>
+                </div>
+                <div id="clearanceSearchContainer" style="margin-top:0;">
+                    <div id="clearanceSearchTitle">搜索结果</div>
+                    <div id="clearanceSearchList">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='./lib/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='./lib/touch.js' charset='utf-8'></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <!-- 业务js -->
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/setPage.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

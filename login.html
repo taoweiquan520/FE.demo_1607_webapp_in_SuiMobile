@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>登录</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="public/css/sm.css">
+	<link rel="stylesheet" href="public/css/layout.css">
+	<link rel="stylesheet" href="public/css/app.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1463132792_2761781.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="loginPage">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<img src="./public/img/logo.png"/>
+				</a>
+				<!-- <a class="button button-link button-nav pull-right">
+					<img src="./public/img/exit.png"/>	
+				</a> -->
+			</header>
+			<div class="content">
+				<div id="loginContainer">
+					<div class="circle-input-container send-code-container">
+						<ul>
+							<li>
+								<input type="tel" placeholder="手机号" id="mobile">
+							</li>
+							<li>
+								<input type="text" placeholder="验证码" id="checkCode">
+								<input type="hidden" id="msgNum" value=""/>
+								<a class="send-code" href="" id="send" onclick="sendCode()">
+									获取验证码
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="circle-button-container">
+						<p>
+							<button class="button button-fill circle-button" id="loginBtn">
+								登录
+							</button>
+						</p>
+					</div>
+				</div>
+				<div id="otherOperate">
+					<a href="" class="pull-left" onclick="pageEffects.login_toggle('#loginPage2')">
+						使用用户名和密码登录
+					</a>
+					<a href="" class="pull-right" onclick="rot.reseting_tel()">
+						重置手机号
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="page index" id="loginPage2">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left">
+					<img src="./public/img/logo.png"/>
+				</a>
+				<!-- <a class="button button-link button-nav pull-right">
+					<img src="./public/img/exit.png"/>	
+				</a> -->
+			</header>
+			<div class="content">
+				<div id="loginContainer">
+					<div class="circle-input-container">
+						<ul>
+							<li>
+								<input type="text" placeholder="账号" id="loginName">
+							</li>
+							<li>
+								<input type="password" placeholder="密码" id="loginPwd">
+							</li>
+						</ul>
+					</div>
+					<div class="circle-button-container">
+						<p>
+							<button class="button button-fill circle-button" id="loginBtn2">
+								登录
+							</button>
+						</p>
+					</div>
+				</div>
+				<div id="otherOperate">
+					<a href="" class="pull-left" onclick="pageEffects.login_toggle('#loginPage')">
+						使用手机号登录
+					</a>
+					<a href="" class="pull-right" onclick="rot.reseting_pwd()">
+						重置登录密码
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type='text/javascript' src='./lib/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='./lib/touch.js' charset='utf-8'></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+	<!-- 业务js -->
+	<script type="text/javascript" src="js/setPage.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<!-- <script type="text/javascript" src="js/app.js"></script> -->
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

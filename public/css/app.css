@@ -1,0 +1,805 @@
+/*index.html*/
+
+* {
+    color: #848484;
+}
+.index .logout {
+    color: #fff;
+    padding-left: .5rem;
+}
+.index .main-list .item-media,
+.index .main-list .item-inner {
+    border-bottom: 1px solid #e7e7e7;
+}
+.index .item-content img {
+    border-radius: 10px;
+}
+.index .item-title-row {
+    margin-bottom: .2rem;
+    min-height: 1.1rem;
+}
+.index .card {
+    border-radius: 0;
+}
+.index .card .fa {
+    font-size: .8rem;
+}
+.index .item-icon {
+    display: inline-block;
+    text-align: center;
+    width: 1rem;
+}
+.index .main-list .item-media {
+    vertical-align: middle;
+    width: .8rem;
+    min-height: 2.75rem;
+}
+.index .list-block .item-inner {
+    margin-left: 0;
+    padding-left: .75rem;
+}
+.index .list-block .item-inner:after {
+    display: none;
+}
+.index .list-block .cancel-border {
+    border-bottom: 0;
+}
+.index .list-block .top-border {
+    border-top: 1px solid #e7e7e7;
+    ;
+}
+.index .item-subtitle {
+    font-weight: normal;
+    font-size: .6rem;
+}
+
+/*
+==============================
+    login
+============================
+*/
+#loginPage .bar-nav, 
+#loginPage .bar-nav:after, 
+#loginPage .content, 
+#loginPage2 .bar-nav, 
+#loginPage2 .bar-nav:after, 
+#loginPage2 .content {
+    background-color: #ffffff;
+}
+#loginPage header, 
+#loginPage2 header {
+    padding: 0.5rem 1rem;
+}
+
+#loginPage .bar-nav img, 
+#loginPage2 .bar-nav img {
+    height: 100%;
+}
+#loginPage #loginBtn, 
+#loginPage2 #loginBtn2 {
+    background-color: #00d96e;
+}
+#loginPage #otherOperate, 
+#loginPage2 #otherOperate {
+    width: 95%;
+    margin: 0 auto;
+}
+#loginPage #otherOperate a, 
+#loginPage2 #otherOperate a {
+    font-size: 0.5rem;
+    color: #b3b3b3;
+}
+
+/*
+==============================
+    scm_index
+==============================
+*/
+#mainPage .bar a {
+    margin-right: 0.25rem;
+}
+#mainPage .bar a img {
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: middle;
+}
+#mainPage .list-block {
+    margin: 0;
+}
+#mainPage .list-block .item-link {
+    margin: 1rem auto;
+    background-color: #ffffff;
+}
+#mainPage .list-block .item-link .item-inner {
+    padding: 0;
+}
+
+/* news content */
+#mainPage #newsContainer {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    top: 0;
+    font-size: 0.5rem;
+    background-color: #a1a1a1;
+}
+#mainPage #newsContainer #iconContent {
+    width: 1rem;
+    text-align: center;
+    float: left;
+}
+#mainPage #newsContainer #iconContent i.fa {
+    color: #ffffff;
+}
+#mainPage #newsContainer #newsContent {
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* user content */
+#mainPage #userInfo #infoContainer {
+    width: 100%;
+}
+#mainPage #userInfo #userAvatar {
+    display: inline-block;
+    width: 5rem;
+    height: 4rem;
+    float: left;
+}
+#mainPage #userInfo #userAvatar img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem 1rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 0.1rem;
+}
+#mainPage #userInfo #userText {
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+#mainPage #userInfo #userText .row-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#mainPage #userInfo #userText #shopName {
+    font-size: 0.7rem;
+}
+#mainPage #userInfo #userText #userName,
+#mainPage #userInfo #userText #telNum {
+    font-size: 0.6rem;
+    color: #848484;
+}
+
+/* user's orders && user's other link */
+#mainPage #orderLink .link-part,
+#mainPage #otherLink .link-part {
+    width: 33.3%;
+    display: inline-block;
+    float: left;
+}
+
+/*orders*/
+#mainPage #orderLink {
+    height: 3rem;
+}
+#mainPage #orderLink .link-part .part-item {
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+}
+#mainPage #orderLink .link-part .part-item .part-icon {
+    display: inline-block;
+    width: auto;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.25rem;
+    float: left;
+}
+#mainPage #orderLink .link-part .part-item .part-icon img {
+    height: 1rem;
+    vertical-align: middle;
+}
+#mainPage #orderLink .link-part .part-item .part-text {
+    display: inline-block;
+    height: 3rem;
+    line-height: 2rem;
+    padding: 0.5rem 0;
+    text-align: left;
+}
+#mainPage #orderLink .link-part .part-item .part-text .text-title {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+#mainPage #orderLink .link-part .part-item .part-text .text-content {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.5rem;
+}
+
+/* quick-link */
+#mainPage #otherLink {
+    height: 4rem;
+}
+#mainPage #otherLink .link-part {
+    height: 4rem;
+}
+#mainPage #otherLink .link-part .part-item {
+    height: 4rem;
+    line-height: 4rem;
+}
+#mainPage #otherLink .link-part .part-item .part-icon,
+#mainPage #otherLink .link-part .part-item .part-text {
+    height: 2rem;
+    line-height: 2rem;
+}
+#mainPage #otherLink .link-part .part-item .part-icon img {
+    height: 1rem;
+    vertical-align: bottom;
+}
+#mainPage #otherLink .link-part .part-item .part-text {
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+/* setting page */
+#settingPage .list-block {
+    margin: 0;
+}
+#settingPage .rectangle-button {
+    background-color: #ff3232;
+}
+
+/* qrcode popup */
+#qrcodePopup header {
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+}
+#qrcodePopup header .title {
+    color: #848484;
+}
+#qrcodePopup header img {
+    height: 100%;
+}
+#qrcodePopup #qrcodeImg {
+    margin: 1rem auto;
+    text-align: center;
+}
+#qrcodePopup #qrcodeImg img {
+    width: 8rem;
+    height: 8rem;
+}
+
+/*
+==============================
+    user_info
+==============================
+*/
+#userInfoPage .list-block .item-after {
+    max-height: 5rem;
+    flex-shrink: 1;
+    white-space: normal;
+}
+#userInfoPage #avatarContainer {
+    height: 4rem;
+    line-height: 3rem;
+    margin: 0;
+}
+#userInfoPage #avatarContainer .item-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+#userInfoPage #avatarContainer #avatarImg {
+    max-height: 3rem;
+    line-height: 3rem;
+    margin: 0;
+}
+#userInfoPage #avatarContainer #avatarImg img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+}
+
+/*
+==============================
+    my_orders
+==============================
+*/
+#myOrdersPage .content-block {
+	padding: 0;
+	margin: 0;
+}
+#myOrdersPage .no-item {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+#myOrdersPage .no-item:after {
+    content: "该类别下没有暂无订单...";
+}
+
+/* order-item */
+#myOrdersPage .order-item {
+	margin-bottom: 0.5rem;
+	background-color: #ffffff;
+}
+#myOrdersPage .order-item * {
+	color: #000000;
+}
+#myOrdersPage .order-item .status-tobesended, 
+#myOrdersPage .order-item .per-price, 
+#myOrdersPage .order-item .total-price {
+	color: #ff6632;
+}
+#myOrdersPage .order-item .info-options {
+	font-size: 0.7rem;
+    color: #848484;
+}
+#myOrdersPage .order-item .order-header {
+	display: flex;
+	padding: 0.5rem;
+	border-bottom: 1px solid #f0f0f0;
+	justify-content: space-between;
+}
+#myOrdersPage .order-item .order-content {
+	position: relative;
+	display: flex;
+	padding: 1rem 0.5rem;
+	background:#efeff4;
+}
+#myOrdersPage .order-item .order-content .order-media {
+	width: 4rem;
+	height: 4rem;
+    padding: 1px;
+	margin: 0 0.5rem 0 0;
+	border: 1px solid #848484;
+	border-radius: 0.1rem;
+}
+#myOrdersPage .order-item .order-content .order-media img {
+	height: 100%;
+	width: 100%;
+}
+#myOrdersPage .order-item .order-content .order-media.more-media:after {
+    content: "没有更多记录了";
+    position: absolute;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 0.5rem;
+}
+#myOrdersPage .order-item .order-content .order-info {
+	flex: 1 1 0;
+    padding-right: 0.25rem;
+}
+#myOrdersPage .order-item .order-content .order-info .info-amount {
+	display: flex;
+	justify-content: space-between;
+}
+#myOrdersPage .order-item .order-footer {
+	padding: 0.5rem;
+	border-top: 1px solid #f0f0f0;
+	text-align: right;
+}
+
+/* more than 1 item */
+#myOrdersPage .order-item.more-items .order-info {
+	height: 4rem;
+	line-height: 4rem;
+	text-align: right;
+}
+
+/*
+==============================
+    order_details
+==============================
+*/
+#orderDetails .bar-tab {
+    height: 2.5rem;
+    line-height: 2rem;
+    padding: 0.25rem 1rem;
+    margin: 0;
+    background-color: #ffffff;
+}
+#orderDetails .bar-tab .button {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+}
+#orderDetails .order-item * {
+    color: #000000;
+}
+#orderDetails .order-item .status-tobesended, 
+#orderDetails .order-item .per-price, 
+#orderDetails .order-item .sum-price, 
+#orderDetails .order-item .total-price, 
+#orderDetails .order-item .product-name {
+    color: #ff6632;
+}
+#orderDetails .order-item .info-options {
+    font-size: 0.7rem;
+    color: #848484;
+}
+#orderDetails .order-item .order-header {
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+#orderDetails .order-item .order-content .receive-info {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+}
+#orderDetails .order-item .order-content .receive-info p {
+    position: relative;
+    padding-left: 1rem;
+}
+#orderDetails .order-item .order-content .receive-info i.fa {
+    position: absolute;
+    margin-top: 0.1rem;
+    margin-left: -0.75rem;
+}
+.picker-modal{
+	background: #fff;
+}
+.picker-items{
+	font-size: 1rem;
+}
+.no-padding{
+	padding:0 !important;
+}
+/* more than one product -----product-list */
+#orderDetails .product-item {
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #ffffff;
+}
+#orderDetails .product-item .product-header {
+    padding: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+#orderDetails .product-item .product-content {
+    position: relative;
+    display: flex;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    background:#efeff4;
+}
+#orderDetails .product-item .product-content .product-media {
+    width: 4rem;
+    height: 4rem;
+    padding: 1px;
+    margin: 0 0.5rem 0 0;
+    border: 1px solid #848484;
+    border-radius: 0.1rem;
+}
+#orderDetails .product-item .product-content .product-media img {
+    height: 100%;
+    width: 100%;
+}
+#orderDetails .product-item .product-content .product-info {
+    flex: 1 1 0;
+}
+#orderDetails .product-item .product-content .product-info .info-amount {
+    display: flex;
+    justify-content: space-between;
+}
+#orderDetails .product-item .product-footer {
+    padding: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: right;
+}
+#orderDetails .total-price-container {
+    padding: 0.5rem;
+    background-color: #ffffff;
+    text-align: right;
+}
+
+#orderDetails .order-item .express-info .content-block-title, 
+#orderDetails .order-item .feedback-info .content-block-title {
+    margin: 0.5rem;
+}
+#orderDetails .order-item .express-info ul, 
+#orderDetails .order-item .feedback-info ul, {
+    padding: 0 0.5rem;
+}
+#orderDetails .order-item .express-info li, 
+#orderDetails .order-item .feedback-info li {
+    padding: 0;
+    margin: 0;
+}
+#orderDetails .order-item .express-info .item-media {
+    width: 2em;
+    height: 2em;
+    padding: 1px;
+    margin: 0 0 0 0.5rem;
+}
+#orderDetails .order-item .express-info .item-media img {
+    width: 100%;
+    height: 100%;
+}
+#orderDetails .order-item .express-info .item-inner, 
+#orderDetails .order-item .feedback-info .item-inner  {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+#orderDetails #expressPicker, 
+#orderDetails #expressNo {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding-right: 25px;
+    color: #848484;
+    text-align: right;
+}
+
+/*
+==============================
+    finance_center
+==============================
+*/
+/* finance-overview */
+.finance-overview {
+    margin: 0.5rem 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #ffffff;
+}
+.finance-overview .view-container:nth-of-type(2n+1) {
+    border-right: 1px solid #d6d6d6
+}
+.finance-overview .view-item {
+    display: inline-block;
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+.finance-overview .view-item .view-icon {
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 0.5rem;
+    float: left;
+}
+.finance-overview .view-item .view-icon img {
+    width: 1rem;
+    height: 1rem;
+}
+.finance-overview .view-item .view-text {
+    display: inline-block;
+    height: 3rem;
+    padding-top: 0.5rem;
+    text-align: left;
+}
+.finance-overview .view-item .view-text .text-title {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+.finance-overview .view-item .view-text .text-subtitle {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.6rem;
+}
+
+#financeCenterPage .finance-item {
+    padding: 0.25rem 0;
+    margin: 0.5rem 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #ffffff;
+}
+#financeCenterPage .finance-item> div {
+    padding-left: 0.5rem;
+}
+#financeCenterPage .finance-item .item-amount {
+    font-size: 0.8rem;
+}
+#financeCenterPage .finance-item:not(.item-amount) {
+    font-size: 0.7rem;
+}
+#financeCenterPage .finance-item .status-cleared {
+    color: #ff6632;
+}
+#financeCenterPage .no-finance-item {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+#financeCenterPage .no-finance-item:after {
+    content: "没有相关流水记录";
+}
+
+/*
+==============================
+    my_clearance
+==============================
+*/
+#myClearance a {
+    color: #848484;
+}
+#myClearance .status-tobechecked {
+    color: #ff6632;
+}
+#myClearance header.bar {
+    position: fixed;
+}
+#myClearance #quickLinksContainer {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 999;
+}
+#myClearance #quickLinksContainer #quickLinks {
+    position: relative;
+    height: 2rem;
+    line-height: 1.5rem;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #ffffff;
+}
+
+/* searchbar */
+#myClearance #quickLinksContainer #quickLinks #searchContainer:not(.active) {
+    display: none;
+}
+#myClearance #quickLinksContainer #quickLinks #searchContainer, 
+#myClearance #quickLinksContainer #quickLinks #searchContainer .bar-header-secondary,  {
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+#myClearance #quickLinksContainer #quickLinks #searchContainer .searchbar {
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+}
+#myClearance #quickLinksContainer #quickLinks #searchContainer input {
+    height: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+#myClearance #quickLinksContainer #quickLinks #applyLink a {
+    color: #f6383a;
+}
+#myClearance #clearanceContainer, 
+#myClearance #clearanceSearchContainer {
+    display: none;
+    margin-top: 2rem;
+}
+#myClearance #clearanceSearchContainer .infinite-scroll-preloader {
+	width: 100%;
+    background-color: #efeff4;
+}
+#myClearance #clearanceContainer.active, 
+#myClearance #clearanceSearchContainer.active {
+    display: block;
+}
+#myClearance #clearanceTitle, 
+#myClearance #clearanceSearchTitle {
+    padding: 0.5rem;
+}
+#myClearance #clearanceList, 
+#myClearance #clearanceSearchList {
+    background-color: #ffffff;
+}
+#myClearance .clearance-item:first-child {
+    border-top: 1px solid #d6d6d6;
+}
+#myClearance .clearance-item {
+    padding: 0.5rem;
+}
+#myClearance .status-rejected,
+#myClearance .status-tobesubmit,
+#myClearance .status-beingchecked, 
+#myClearance .status-checked, 
+#myClearance .status-payed {
+    color: #ff6632;
+}
+#myClearance .no-clearance-item, 
+#myClearance .no-search-item {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+    background-color: #efeff4;
+}
+#myClearance .no-clearance-item:after {
+    content: "没有相关流水记录";
+}
+#myClearance .no-search-item:after {
+    content: "没有相关结果";
+}
+
+/*
+==============================
+    applying_clearance
+==============================
+*/
+#clearanceApply .bar-tab {
+    height: 2.5rem;
+    line-height: 2rem;
+    padding: 0.25rem 1rem;
+    margin: 0;
+    background-color: #ffffff;
+}
+#clearanceApply .bar-tab a {
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin: 0.25rem 0;
+}
+#clearanceApply .bar-tab .button {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0;
+    color: #ffffff;
+    background-color: #ff6632;
+}
+/* custom circle-checkbox-container */
+#clearanceApply .orders-item .order-header {
+    position: relative;
+    padding: 0 0.5rem 0 1.75rem;
+}
+#clearanceApply .orders-item .circle-checkbox-container {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    margin-left: -1.25rem;
+}
+#clearanceApply #selectAllBtn {
+    position: relative;
+    display: block;
+    padding: 0 0 0 1.5rem;
+    color: #848484;
+}
+#clearanceApply #selectAllBtn .circle-checkbox-container {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5rem;
+    margin-left: -1.25rem;
+}
+
+#clearanceApply .no-item {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+#clearanceApply .no-item:after {
+    content: "暂无相关的清算申请";
+}
+ /* 全选按钮自定义 */
+#clearanceApply #selectAllBtn i.icon {
+    padding: 0;
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+#clearanceApply #selectAllBtn.selected .icon-container {
+    background-color: #ff6632;
+}
+#clearanceApply #selectAllBtn.selected i.icon {
+    line-height: 1rem;
+}
+
+/*
+==============================
+    clearance_details
+==============================
+*/
+#clearanceDetails #ordersOverview {
+	padding: 0.5rem;
+	background-color: #ffffff;
+}
+#clearanceDetails #ordersOverview .status-rejected,
+#clearanceDetails #ordersOverview .status-tobesubmit,
+#clearanceDetails #ordersOverview .status-beingchecked, 
+#clearanceDetails #ordersOverview .status-checked, 
+#clearanceDetails #ordersOverview .status-payed {
+    color: #ff6632;
+}
+#clearanceDetails .no-order-item {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+#clearanceDetails .no-order-item:after {
+    content: "该订单下暂无可提交的审核";
+}

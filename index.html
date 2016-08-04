@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>洗游记</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="public/css/sm.css">
+	<link rel="stylesheet" href="public/css/layout.css">
+	<link rel="stylesheet" href="public/css/app.css">
+	<link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1463132792_2761781.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+	<div class="page-group">
+		<div class="page page-current index" id="mainPage">
+			<header class="bar bar-nav">
+				<a href="" class="button button-link button-nav pull-right" onclick="rot.setting_page()">
+					<img src="./public/img/setting_icon.png">
+				</a>
+				<a href="" class="button button-link button-nav pull-right" id="scanBtn">
+					<img src="./public/img/scan_icon.png">
+				</a>
+				<h1 class="title">洗游记</h1>
+			</header>
+			<div class="content">
+				<div id="newsContainer">
+					<div id="iconContent"><i class="fa fa-lightbulb-o"></i></div>
+					<div id="newsContent">
+						<div id="scrollDiv" style="white-space:nowrap;overflow:hidden;">
+							<div id="scrollBegin" style="display:inline;color:#ffffff;">
+								好消息！好消息！这是一条好消息。这条好消息有点长，超出屏幕了。这条好消息有点长，超出屏幕了。
+							</div>
+							<div id="scrollEnd" style="display:inline;color:#ffffff;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="list-block">
+					<div id="userInfo" class="item-link" onclick="rot.user_info()">
+						<div class="item-inner">
+							<div id="infoContainer">
+								<div id="userAvatar">
+									<img src="">
+								</div>
+								<div id="userText">
+									<div class="row-item">
+										<i class="fa fa-home"></i>&nbsp;
+										<span id="shopName"></span>
+									</div>
+									<div class="row-item">
+										<i class="fa fa-user"></i>&nbsp;
+										<span id="userName"></span>
+									</div>
+									<div class="row-item">
+										<i class="fa fa-phone"></i>&nbsp;
+										<span id="telNum"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="orderLink" class="item-link">
+						<div class="item-inner">
+							<div class="link-part text-center vertical-division" onclick="rot.my_orders()">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/all_orders.png">
+									</div>
+									<div class="part-text">
+										<div class="text-title">全部订单</div>
+										<div class="text-content">共<span id="allCount"></span>单</div>
+									</div>
+								</div>
+							</div>
+							<div class="link-part text-center vertical-division" onclick="rot.tobesended_orders()">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/tobesended_orders.png">
+									</div>
+									<div class="part-text">
+										<div class="text-title">待发货订单</div>
+										<div class="text-content">共<span id="tobesendedCount"></span>单</div>
+									</div>
+								</div>
+							</div>
+							<div class="link-part text-center" onclick="rot.sended_orders()">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/sended_orders.png">
+									</div>
+									<div class="part-text">
+										<div class="text-title">已发货订单</div>
+										<div class="text-content">共<span id="sendedCount"></span>单</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="otherLink" class="item-link" >
+						<div class="text-center">
+							<div class="link-part vertical-division" onclick="rot.my_finance()">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/finance_center.png">
+									</div>
+									<div class="part-text">财务中心</div>
+								</div>
+							</div>
+							<div class="link-part vertical-division" onclick="rot.my_clearance()">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/final_amount.png">
+									</div>
+									<div class="part-text">清算申请</div>
+								</div>
+							</div>
+							<div class="link-part open-popup" data-popup="#qrcodePopup">
+								<div class="part-item">
+									<div class="part-icon">
+										<img src="./public/img/qr_code.png">
+									</div>
+									<div class="part-text">二维码</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page index" id="settingPage">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-left" onclick="rot.back()">
+					<span class="icon icon-left"></span>
+				</a>
+				<h1 class="title">设置</h1>
+			</header>
+			<div class="content">
+				<div class="list-block">
+					<ul>
+						<li class="item-content item-link" onclick="getData.clear_cache()">
+							<div class="item-inner">
+								<div class="item-title">清除缓存</div>
+								<div class="item-after" ><span id="cache"></span>缓存</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="rectangle-button-container">
+					<p>
+						<button class="button button-fill rectangle-button" id="logoutBtn" onclick="rot.user_logout()">
+							退出当前账号
+						</button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="qrcodePopup">
+			<header class="bar bar-nav">
+				<a class="button button-link button-nav pull-right close-popup">
+					<img src="./public/img/exit.png"/>
+				</a>
+				<h1 class="title">二维码</h1>
+			</header>
+		<div class="content">
+			<div id="qrcodeImg">
+				<img src="">
+			</div>
+			<p class="text-center text-size-m" id="tipInfo">
+				扫描上方二维码，获取我的资料。
+			</p>
+		</div>
+	</div>
+
+	<script type='text/javascript' src='./lib/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='./lib/touch.js' charset='utf-8'></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+	<!-- 业务js -->
+	<script type="text/javascript" src="/lib/default/js/base/app.js"></script>
+	<script type="text/javascript" src="js/logout.js"></script>
+	<script type="text/javascript" src="js/setPage.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/scanQR.js"></script>
+	<script type="text/javascript">
+		/* 消息滚动播放 */
+		function scrollText() { 
+                var speed = 50,
+                    scroll_begin = document.getElementById("scrollBegin"),
+                    scroll_end   = document.getElementById("scrollEnd"),
+                    scroll_div   = document.getElementById("scrollDiv");
+
+                if (scroll_begin.offsetWidth <= scroll_div.offsetWidth) {
+                    return ;
+                }
+
+                scroll_div.scrollLeft = 0;
+                scroll_end.innerHTML=scroll_begin.innerHTML;
+
+                function Marquee() { 
+                    if(scroll_begin.offsetWidth - scroll_div.scrollLeft <= 0) 
+                        scroll_div.scrollLeft -= scroll_begin.offsetWidth; 
+                    else 
+                        scroll_div.scrollLeft++; 
+                } 
+                var MyMar = setInterval(Marquee,speed); 
+                scroll_div.onmouseover=function() { clearInterval(MyMar); } 
+                scroll_div.onmouseout=function() { MyMar = setInterval(Marquee, speed); } 
+            }
+
+        setTimeout(function() {
+            scrollText();
+        }, 2000);
+	</script>
+</body>
+</html>
